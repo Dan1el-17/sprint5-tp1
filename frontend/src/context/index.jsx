@@ -9,7 +9,6 @@ export const ProductsProvider = ({ children }) => {
     const getProducts = async () => {
         await axios.get('http://localhost:8080/products')
             .then(response => {
-                console.log(response.data);
                 setProducts(response.data);
             })
             .catch(error => {
